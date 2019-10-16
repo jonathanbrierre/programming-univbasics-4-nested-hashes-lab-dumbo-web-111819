@@ -15,7 +15,7 @@ def hopper
           :languages => ["C"]
         }
      }
-
+programmer_hash[:grace_hopper]
 
 end
 
@@ -37,6 +37,7 @@ def alan_kay_is_known_for
           :languages => ["C"]
         }
      }
+     programmer_hash[:alan_kay][:known_for]
 end
 
 def dennis_ritchies_language
@@ -55,6 +56,8 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
+    dr_languages = programmer_hash[:dennis_ritchie][:languages]
+    dr_languages.join(' ')
 end
 
 def adding_matz
@@ -79,8 +82,15 @@ def adding_matz
           :languages => ["C"]
         }
      }
-
-    
+     
+  
+  new_programmer_hash = :yukihiro_matsumoto => {
+   :known_for => "Ruby",
+   :languages => ["LISP", "C"]
+   }.merge(programmer_hash)
+   
+   p new_programmer_hash
+   
 end
 
 def changing_alan
